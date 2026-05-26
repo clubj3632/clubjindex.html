@@ -1,1 +1,336 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>クラブジェイ篠路店｜PACHINKO & SLOT</title>
+  <meta name="description" content="クラブジェイ篠路店の公式ホームページ。営業時間、新台情報、0.5円パチンコ、賞品・景品、アクセス情報を掲載。" />
+  <style>
+    :root{
+      --mint:#19c7b3;
+      --mint2:#7df7e8;
+      --deep:#071414;
+      --dark:#041010;
+      --gold:#d7b45d;
+      --red:#e83333;
+      --blue:#1858d8;
+      --green:#35c736;
+      --purple:#7750d8;
+      --white:#fff;
+      --soft:#f3fffd;
+      --line:#d8f5f1;
+      --shadow:0 12px 30px rgba(0,0,0,.14);
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+      color:#122;
+      background:linear-gradient(180deg,#ffffff 0%,#f4fffd 45%,#ffffff 100%);
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .wrap{width:min(1180px,94vw);margin:0 auto}
+
+    header{
+      background:rgba(255,255,255,.92);
+      backdrop-filter: blur(12px);
+      position:sticky;
+      top:0;
+      z-index:20;
+      border-bottom:1px solid var(--line);
+    }
+    .header-inner{
+      min-height:86px;
+      display:flex;
+      align-items:center;
+      gap:24px;
+      justify-content:space-between;
+    }
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      font-weight:900;
+      letter-spacing:.08em;
+    }
+    .logo-mark{
+      font-size:46px;
+      line-height:1;
+      color:var(--mint);
+      text-shadow:0 0 16px rgba(25,199,179,.35);
+      transform:skew(-8deg);
+    }
+    .logo-main{font-size:30px;line-height:1;font-weight:950}
+    .logo-sub{font-size:12px;letter-spacing:.18em;color:#536866;margin-top:5px}
+    .top-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      min-height:42px;padding:10px 16px;border-radius:12px;
+      font-weight:800;box-shadow:0 7px 18px rgba(0,0,0,.12);
+      transition:.2s transform,.2s box-shadow;
+    }
+    .btn:hover{transform:translateY(-2px);box-shadow:0 12px 24px rgba(0,0,0,.18)}
+    .btn-line{background:#06c755;color:#fff}
+    .btn-x{background:#050505;color:#fff}
+    .btn-map{background:var(--mint);color:#fff}
+
+    nav{border-top:1px solid var(--line)}
+    .nav-list{display:grid;grid-template-columns:repeat(6,1fr);gap:0}
+    .nav-item{
+      padding:14px 10px;text-align:center;border-right:1px solid var(--line);
+      font-weight:800;color:#173b38;background:#fff;
+    }
+    .nav-item:first-child{border-left:1px solid var(--line)}
+    .nav-item span{display:block;font-size:11px;color:#6a807d;font-weight:600;margin-top:3px}
+    .nav-item:hover{background:var(--soft);color:var(--mint)}
+
+    .hero{
+      position:relative;overflow:hidden;color:white;
+      background:
+        radial-gradient(circle at 75% 35%, rgba(125,247,232,.55), transparent 18%),
+        radial-gradient(circle at 16% 10%, rgba(191,82,255,.45), transparent 20%),
+        linear-gradient(120deg, rgba(0,0,0,.7), rgba(0,80,85,.42)),
+        linear-gradient(135deg,#061111 0%,#08283a 45%,#0a1020 100%);
+      min-height:560px;
+      display:flex;align-items:center;
+      border-bottom:5px solid var(--mint);
+    }
+    .hero:before{
+      content:"";position:absolute;inset:0;
+      background-image:
+        linear-gradient(rgba(125,247,232,.09) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(125,247,232,.08) 1px, transparent 1px);
+      background-size:42px 42px;
+      mask-image:linear-gradient(to bottom,rgba(0,0,0,.9),rgba(0,0,0,.15));
+    }
+    .hero:after{
+      content:"";position:absolute;width:780px;height:780px;border-radius:50%;right:-220px;top:-160px;
+      background:radial-gradient(circle,rgba(25,199,179,.28),transparent 62%);
+      filter:blur(2px);
+    }
+    .hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:20px;padding:54px 0}
+    .hero-copy small{display:inline-block;color:var(--mint2);font-weight:900;letter-spacing:.2em;margin-bottom:12px}
+    .hero-title{font-size:clamp(58px,8vw,108px);line-height:.93;margin:0;font-weight:950;letter-spacing:.02em;text-shadow:0 0 25px rgba(0,0,0,.45)}
+    .hero-title strong{color:#dfff00;display:inline-block;font-size:1.15em}
+    .hero-lead{font-size:clamp(20px,2.2vw,30px);font-weight:900;margin:22px 0 8px}
+    .hero-text{font-size:18px;line-height:1.8;font-weight:700;margin:0 0 24px}
+    .hero-badges{display:flex;gap:14px;flex-wrap:wrap}
+    .badge{
+      background:rgba(255,255,255,.12);border:1px solid rgba(125,247,232,.55);
+      box-shadow:inset 0 0 18px rgba(125,247,232,.16),0 0 22px rgba(25,199,179,.18);
+      border-radius:18px;padding:14px 18px;font-weight:900;
+    }
+    .badge b{color:var(--mint2);font-size:28px;margin-right:4px}
+
+    .mascot-card{
+      justify-self:end;width:min(450px,100%);min-height:450px;border-radius:38px;
+      border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.12);
+      box-shadow:0 30px 70px rgba(0,0,0,.35), inset 0 0 32px rgba(255,255,255,.08);
+      display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;
+    }
+    .mascot-card:before{content:"";position:absolute;inset:18px;border-radius:28px;border:2px solid rgba(125,247,232,.38)}
+    .mascot-face{font-size:142px;filter:drop-shadow(0 0 20px rgba(125,247,232,.55));line-height:1}
+    .mascot-name{position:absolute;right:24px;bottom:24px;background:rgba(255,255,255,.92);color:#08786d;border-radius:18px;padding:12px 18px;font-weight:950;box-shadow:var(--shadow)}
+    .mascot-name span{display:block;font-size:11px;color:#6a807d;letter-spacing:.1em}
+
+    .feature-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:-50px;position:relative;z-index:5}
+    .feature{
+      min-height:160px;border-radius:20px;padding:24px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);
+      position:relative;overflow:hidden;
+    }
+    .feature:after{content:"";position:absolute;right:-50px;bottom:-70px;width:180px;height:180px;border-radius:50%;background:rgba(25,199,179,.13)}
+    .feature h3{margin:0 0 10px;font-size:28px;color:#0c8176;line-height:1.15}
+    .feature p{margin:0 0 18px;font-weight:700;line-height:1.6}
+    .feature .mini-btn{display:inline-block;background:var(--mint);color:#fff;border-radius:999px;padding:8px 18px;font-size:13px;font-weight:900}
+    .feature.red h3{color:var(--red)}
+    .feature.gold h3{color:#916b16}
+
+    .info-strip{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin:26px 0}
+    .info-box{background:#fff;border:1px solid var(--line);border-radius:14px;text-align:center;padding:16px 8px;box-shadow:0 7px 18px rgba(0,0,0,.07);font-weight:900}
+    .info-box small{display:block;color:#078276;margin-bottom:8px;font-weight:900}
+    .info-box b{font-size:30px}
+    .rate4{border-color:#ffbbbb}.rate4 small,.rate4 b{color:var(--red)}
+    .rate1{border-color:#bceebb}.rate1 small,.rate1 b{color:var(--green)}
+    .rate05{border-color:#9cf4eb}.rate05 small,.rate05 b{color:var(--mint)}
+    .rate20{border-color:#b9c9ff}.rate20 small,.rate20 b{color:var(--blue)}
+    .rate5{border-color:#d6c8ff}.rate5 small,.rate5 b{color:var(--purple)}
+
+    section{padding:34px 0}
+    .section-title{display:flex;align-items:end;justify-content:space-between;margin-bottom:18px;gap:12px}
+    .section-title h2{margin:0;font-size:30px;color:#0b7d72;line-height:1}
+    .section-title span{display:block;font-size:12px;color:#6d8582;letter-spacing:.16em;margin-top:6px}
+    .grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 8px 22px rgba(0,0,0,.08);overflow:hidden}
+    .thumb{height:138px;background:linear-gradient(135deg,#dbfffa,#efffff 45%,#d5fff7);display:flex;align-items:center;justify-content:center;font-size:54px}
+    .card-body{padding:18px}
+    .card h3{margin:0 0 4px;font-size:20px;color:#09877a}.card small{display:block;color:#6d8582;margin-bottom:14px}
+    .card ul{list-style:none;padding:0;margin:0 0 16px}.card li{font-size:13px;padding:5px 0;border-bottom:1px dashed #e2f5f2}.card li:before{content:"›";color:#e44260;margin-right:6px;font-weight:900}
+    .card a{display:block;background:var(--mint);color:#fff;text-align:center;border-radius:10px;padding:9px;font-weight:900;font-size:13px}
+
+    .bottom-grid{display:grid;grid-template-columns:1.2fr .8fr 1fr;gap:18px;align-items:stretch}
+    .panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 8px 22px rgba(0,0,0,.08)}
+    .news-list{margin:0;padding:0;list-style:none}.news-list li{display:grid;grid-template-columns:92px 52px 1fr;gap:10px;align-items:center;padding:11px 0;border-bottom:1px solid #edf6f4;font-size:14px}.tag{background:var(--mint);color:#fff;border-radius:6px;text-align:center;font-size:11px;padding:4px;font-weight:900}.tag.red{background:var(--red)}.tag.gray{background:#78908d}
+    .sns{display:grid;grid-template-columns:1fr 1fr;gap:12px}.qr{border-radius:16px;color:#fff;text-align:center;padding:18px 10px;font-weight:950;min-height:154px;display:flex;flex-direction:column;justify-content:center}.qr.line{background:#06c755}.qr.x{background:#111}.qr .dummy{width:70px;height:70px;background:repeating-linear-gradient(45deg,#fff 0 5px,#111 5px 10px);margin:12px auto;border:5px solid #fff}
+    .mapbox{height:150px;border-radius:14px;background:linear-gradient(135deg,#f4f4f4,#d9eeee);display:flex;align-items:center;justify-content:center;color:#e02929;font-size:46px;margin-top:12px}
+
+    footer{background:#020808;color:#fff;margin-top:34px;padding:36px 0}.footer-inner{display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}.footer-logo{font-size:30px;font-weight:950;letter-spacing:.1em}.footer-logo b{color:var(--mint);font-size:42px}.footer-info{color:#d2eeee;font-size:13px;line-height:1.8}.footer-nav{display:flex;gap:14px;flex-wrap:wrap;color:#b7d8d5;font-size:12px}
+
+    @media (max-width:900px){
+      .header-inner{align-items:flex-start;flex-direction:column;padding:14px 0}.top-actions{justify-content:flex-start}.nav-list{grid-template-columns:repeat(3,1fr)}
+      .hero-inner{grid-template-columns:1fr}.mascot-card{justify-self:stretch;min-height:320px}.mascot-face{font-size:110px}
+      .feature-row{grid-template-columns:1fr;margin-top:18px}.info-strip{grid-template-columns:repeat(2,1fr)}.grid5{grid-template-columns:repeat(2,1fr)}.bottom-grid{grid-template-columns:1fr}
+    }
+    @media (max-width:520px){.logo-main{font-size:22px}.logo-mark{font-size:36px}.btn{width:100%}.top-actions{width:100%}.nav-list{grid-template-columns:repeat(2,1fr)}.hero{min-height:auto}.hero-title{font-size:56px}.grid5{grid-template-columns:1fr}.news-list li{grid-template-columns:80px 46px 1fr;font-size:12px}.info-box b{font-size:24px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap header-inner">
+      <a class="logo" href="#top" aria-label="クラブジェイ篠路店トップへ">
+        <div class="logo-mark">J</div>
+        <div>
+          <div class="logo-main">CLUB-J 篠路店</div>
+          <div class="logo-sub">PACHINKO & SLOT</div>
+        </div>
+      </a>
+      <div class="top-actions">
+        <a class="btn btn-line" href="#">LINE 友だち追加</a>
+        <a class="btn btn-x" href="#">X（旧Twitter）</a>
+        <a class="btn btn-map" href="#access">アクセス・MAP</a>
+      </div>
+    </div>
+    <nav>
+      <div class="wrap nav-list">
+        <a class="nav-item" href="#top">TOP<span>トップ</span></a>
+        <a class="nav-item" href="#shop">店舗案内<span>Information</span></a>
+        <a class="nav-item" href="#new">新台情報<span>New Machine</span></a>
+        <a class="nav-item" href="#character">キャラクター<span>Character</span></a>
+        <a class="nav-item" href="#prize">賞品・景品<span>Prize</span></a>
+        <a class="nav-item" href="#p05">0.5円パチンコ<span>0.5 Yen</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <small>CLUB-J SHINORO OFFICIAL</small>
+          <h1 class="hero-title">ALL<br><strong>9時</strong>開店</h1>
+          <p class="hero-lead">毎日あさ9時オープン！</p>
+          <p class="hero-text">遊びやすさ、もっと身近に。<br>クラブジェイ篠路店でごゆっくりお楽しみください。</p>
+          <div class="hero-badges">
+            <div class="badge"><b>0.5円</b>パチンコ導入</div>
+            <div class="badge"><b>360台</b>設置</div>
+            <div class="badge"><b>23:00</b>まで営業</div>
+          </div>
+        </div>
+        <div class="mascot-card" aria-label="篠ノ姫ひかりイメージ枠">
+          <div>
+            <div class="mascot-face">✨</div>
+            <div style="font-size:24px;font-weight:950;margin-top:12px">篠ノ姫ひかり</div>
+            <div style="color:#dffffb;font-weight:800;margin-top:4px">SHINONOHIME HIKARI</div>
+          </div>
+          <div class="mascot-name">篠ノ姫 ひかり<span>CLUB-J CHARACTER</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap feature-row">
+      <article class="feature red" id="new">
+        <h3>新台入替</h3>
+        <p>最新ラインナップ公開中。導入スケジュールはこちらから。</p>
+        <a class="mini-btn" href="#">詳しくはこちら</a>
+      </article>
+      <article class="feature" id="p05">
+        <h3>0.5円パチンコ</h3>
+        <p>新しい楽しさ、はじまる。気軽に遊べるコーナー登場。</p>
+        <a class="mini-btn" href="#">詳しくはこちら</a>
+      </article>
+      <article class="feature gold" id="prize">
+        <h3>素敵な景品</h3>
+        <p>来店ポイント・端玉景品・限定グッズ情報をチェック。</p>
+        <a class="mini-btn" href="#">詳しくはこちら</a>
+      </article>
+    </div>
+
+    <div class="wrap info-strip" aria-label="店舗基本情報">
+      <div class="info-box"><small>営業時間</small><b>9:00〜23:00</b></div>
+      <div class="info-box"><small>設置台数</small><b>360台</b></div>
+      <div class="info-box rate4"><small>4円パチンコ</small><b>4P</b></div>
+      <div class="info-box rate1"><small>1円パチンコ</small><b>1P</b></div>
+      <div class="info-box rate05"><small>0.5円パチンコ</small><b>0.5P</b></div>
+      <div class="info-box rate20"><small>20円 / 5円スロット</small><b>SLOT</b></div>
+    </div>
+
+    <section class="wrap" id="shop">
+      <div class="section-title"><div><h2>コンテンツ</h2><span>CONTENTS</span></div></div>
+      <div class="grid5">
+        <article class="card">
+          <div class="thumb">🏢</div>
+          <div class="card-body"><h3>店舗案内</h3><small>Information</small><ul><li>フロアマップ</li><li>設備・サービス</li><li>駐車場・アクセス</li></ul><a href="#">詳しく見る</a></div>
+        </article>
+        <article class="card">
+          <div class="thumb">🎰</div>
+          <div class="card-body"><h3>新台情報</h3><small>New Machine</small><ul><li>最新台ラインナップ</li><li>導入スケジュール</li><li>新台入替のご案内</li></ul><a href="#">詳しく見る</a></div>
+        </article>
+        <article class="card" id="character">
+          <div class="thumb">✨</div>
+          <div class="card-body"><h3>キャラクター</h3><small>Character</small><ul><li>篠ノ姫ひかり</li><li>ジェイくん</li><li>限定グッズ紹介</li></ul><a href="#">詳しく見る</a></div>
+        </article>
+        <article class="card">
+          <div class="thumb">🎁</div>
+          <div class="card-body"><h3>賞品・景品</h3><small>Prize</small><ul><li>来店ポイント景品</li><li>缶バッジ</li><li>日用品・美容コーナー</li></ul><a href="#">詳しく見る</a></div>
+        </article>
+        <article class="card">
+          <div class="thumb">🌊</div>
+          <div class="card-body"><h3>0.5円パチンコ</h3><small>0.5 Yen Pachinko</small><ul><li>0.5円の魅力</li><li>導入機種一覧</li><li>遊び方ガイド</li></ul><a href="#">詳しく見る</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <div class="bottom-grid">
+        <div class="panel">
+          <div class="section-title"><div><h2>お知らせ</h2><span>NEWS</span></div><a href="#" style="color:#0b7d72;font-weight:900;font-size:13px">一覧を見る</a></div>
+          <ul class="news-list">
+            <li><time>2026.06.11</time><span class="tag red">新台</span><span>新台入替！最新ラインナップ公開！</span></li>
+            <li><time>2026.06.11</time><span class="tag">0.5P</span><span>0.5円パチンコ導入開始！</span></li>
+            <li><time>2026.06.01</time><span class="tag gray">景品</span><span>来店ポイント景品に新アイテム追加！</span></li>
+            <li><time>2026.05.22</time><span class="tag">告知</span><span>ファン感謝デー開催情報を更新しました。</span></li>
+          </ul>
+        </div>
+        <div class="panel">
+          <div class="section-title"><div><h2>SNS</h2><span>OFFICIAL ACCOUNT</span></div></div>
+          <div class="sns">
+            <a class="qr line" href="#">LINE<div class="dummy"></div>友だち募集中</a>
+            <a class="qr x" href="#">X<div class="dummy"></div>フォローする</a>
+          </div>
+        </div>
+        <div class="panel" id="access">
+          <div class="section-title"><div><h2>アクセス</h2><span>ACCESS</span></div></div>
+          <p style="font-weight:800;line-height:1.8;margin:0">〒002-8022<br>北海道札幌市北区篠路2条7丁目6番2号</p>
+          <p style="margin:10px 0 0;line-height:1.8">JR篠路駅より徒歩約10分<br>大型駐車場完備</p>
+          <div class="mapbox">📍</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <div>
+        <div class="footer-logo">CLUB-<b>J</b> SHINORO</div>
+        <div class="footer-info">クラブジェイ篠路店<br>TEL. 011-772-7900</div>
+      </div>
+      <div class="footer-nav">
+        <a href="#top">TOP</a><a href="#shop">店舗案内</a><a href="#new">新台情報</a><a href="#character">キャラクター</a><a href="#prize">賞品・景品</a><a href="#p05">0.5円パチンコ</a>
+      </div>
+      <div class="footer-info">© CLUB J SHINORO All Rights Reserved.</div>
+    </div>
+  </footer>
+</body>
+</html>
 
